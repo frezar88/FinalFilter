@@ -1,0 +1,178 @@
+.description-car-container {
+    display: none;
+    position: fixed;
+    background-color: rgba(49, 44, 44, 0.651);
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    z-index: 150;
+}
+
+.description-car {
+    display: none;
+    margin: 0 auto;
+    margin-top: 50px;
+    max-width: 1184px;
+    max-height: 820px;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    margin-top: 50px;
+}
+.description-car__wrapper {
+    display: grid;
+    padding: 30px 40px;
+    grid-template-areas: "foto car";
+    grid-template-columns: 1fr 1fr 10px;
+    grid-gap: 30px;
+    margin: 20px;
+}
+.foto-block {
+    grid-area: foto;
+}
+.main-foto {
+    margin-bottom: 10px;
+}
+.main-foto img {
+    max-width: 600px;
+    width: 100%;
+}
+.secondary-foto-block {
+    max-height: 400px;
+    overflow: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-gap: 10px;
+}
+.secondary-foto-block img {
+    max-width: 295px;
+    width: 100%;
+    cursor: pointer;
+}
+.secondary-foto-block img:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+.car-info-block {
+    grid-area: car;
+}
+.car-name {
+    display: flex;
+    align-items: flex-end;
+}
+.car-name p {
+    font-weight: bold;
+    font-size: 25px;
+    line-height: 30px;
+    text-decoration-line: underline;
+    text-transform: uppercase;
+
+    color: #000000;
+}
+.car-name span {
+    margin-left: 10px;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 150%;
+    text-transform: uppercase;
+    color: #000000;
+}
+
+.car-price {
+    margin-top: 12px;
+    display: flex;
+    align-items: flex-end;
+}
+.car-price p {
+    font-weight: bold;
+    font-size: 19px;
+    line-height: 23px;
+    color: #000000;
+}
+.car-price span {
+    margin-left: 3px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    color: #4f4f4f;
+}
+
+.car-mileage,
+.car-drive,
+.car-transmission,
+.car-engine {
+    margin-top: 15px;
+    display: flex;
+    align-items: center;
+}
+.car-engine {
+    margin-top: 24px;
+}
+.car-mileage span,
+.car-drive span,
+.car-transmission span,
+.car-engine span {
+    margin-left: 13px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    color: #000000;
+}
+.car-descript {
+    margin-top: 30px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    color: #000000;
+}
+
+.security-system p,
+.comfort p,
+.additional-equipment p {
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 19px;
+    color: #000000;
+}
+.security-system,
+.comfort,
+.additional-equipment {
+    margin-top: 20px;
+}
+.btn-reserve {
+    margin-top: 30px;
+}
+.block-btn-cross-close img {
+    position: relative;
+    padding: 15px;
+    cursor: pointer;
+    transition: 0.2s;
+    right: 15px;
+    top: -13px;
+}
+.block-btn-cross-close img:hover {
+    cursor: pointer;
+
+    transform: scale(1.2, 1.2);
+}
+
+.secondary-foto-block::-webkit-scrollbar {
+    width: 3px;
+    height: 3px;
+}
+.secondary-foto-block::-webkit-scrollbar-track-piece {
+    background-color: #ffffff;
+}
+.secondary-foto-block::-webkit-scrollbar-thumb {
+    height: 50px;
+    background-color: #666;
+    border-radius: 3px;
+}
+.secondary-foto-block::-webkit-scrollbar-corner {
+    background-color: #999;
+}
+.secondary-foto-block::-webkit-resizer {
+    background-color: #666;
+}
+

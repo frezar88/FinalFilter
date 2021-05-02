@@ -1,0 +1,108 @@
+.header-cars {
+   
+    padding: 15px;
+    background-color: #fff;
+}
+.header-cars__wrapper {
+}
+.header-cars__title {
+}
+.header-cars__title h2 {
+    font-size: 36px;
+}
+.header-cars-content {
+    margin-top: 3rem;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    overflow-x: scroll;
+    overflow-y: hidden;
+}
+.header-cars-content__item {
+    transition: 0.3s;
+    position: relative;
+    cursor: pointer;
+}
+.header-cars-content__item.active::before {
+    transition: 0.3s;
+    content: "";
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    background-color: red;
+    border-radius: 50%;
+}
+.header-cars-content__item.active::after {
+    transition: 0.3s;
+    content: url(../img/accept-arrow-red.svg);
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    background-color: red;
+    border-radius: 50%;
+}
+.header-cars-content__item.active::before, .header-cars-content__item.active::after {
+    transform: translate(8px, 0px);
+}
+.header-cars-content__item p {
+    font-size: 16px;
+}
+.header-cars-content__item img {
+    width: 100%;
+}
+
+.header-cars-content::-webkit-scrollbar {
+    width: 3px;
+    height: 3px;
+}
+.header-cars-content::-webkit-scrollbar-track-piece {
+    background-color: #ffffff;
+}
+.header-cars-content::-webkit-scrollbar-thumb {
+    height: 50px;
+    background-color: #666;
+    border-radius: 3px;
+}
+.header-cars-content::-webkit-scrollbar-corner {
+    background-color: #999;
+}
+.header-cars-content::-webkit-resizer {
+    background-color: #666;
+}
+
+@media (max-width:720px){
+   .header-cars-content__item.active::before {
+    transition: 0.3s;
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: red;
+    border-radius: 50%;
+}
+.header-cars-content__item.active::after {
+    transition: 0.3s;
+    content: url(../img/header-car-slider/accept-arrow-red.svg);
+    position: absolute;
+    top: 3px;
+    left: 2px;
+    background-color: red;
+    border-radius: 50%;
+}
+}
+
+@media (max-width:480px){
+    .header-cars__title h2{
+        font-size:28px ;
+    }
+    .header-cars-content__item p{
+        font-size:12px ;
+    }
+}
+@media (max-width:365px){
+    .header-cars__title h2{
+        font-size:28px ;
+    }
+    .header-cars-content__item p{
+        font-size:10px ;
+    }
+}

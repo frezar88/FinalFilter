@@ -1,0 +1,737 @@
+/*--------------------*/
+body {
+  overflow: auto;
+  height: 20px;
+}
+
+.appraise-car {
+  overflow: auto;
+  z-index: 120;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  position: fixed;
+  top: 0;
+  left: -1000px;
+  max-width: 730px;
+  width: 100%;
+  background-color: #fff;
+  height: 100%;
+  border: solid 1px #e0e0e0;
+}
+
+.appraise-car__wrapper {
+  text-align: center;
+}
+
+.appraise-car-header__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  position: relative;
+}
+
+.appraise-car-header__title {
+  margin-top: 50px;
+  font-family: MMC-Regular;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 29px;
+  color: #333333;
+}
+
+.appraise-car-header__closecross {
+  position: absolute;
+  right: 0;
+  top: 45px;
+  cursor: pointer;
+  padding: 10px 17px;
+}
+
+.appraise-car-header__comlete-line {
+  position: relative;
+  margin-top: 20px;
+  height: 10px;
+  width: 100%;
+  background: #e0e0e0;
+}
+
+.appraise-car-header__comlete-line::before {
+  position: absolute;
+  content: "";
+  width: 0%;
+  height: 10px;
+  background-color: #ed0000;
+  left: 0;
+  top: 0;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.appraise-car-header__comlete-line.one:before {
+  position: absolute;
+  content: "";
+  width: 16.7%;
+  height: 10px;
+  background-color: #ed0000;
+  left: 0;
+  top: 0;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.appraise-car-header__comlete-line.two:before {
+  position: absolute;
+  content: "";
+  width: 33.3%;
+  height: 10px;
+  background-color: #ed0000;
+  left: 0;
+  top: 0;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.appraise-car-header__comlete-line.three:before {
+  position: absolute;
+  content: "";
+  width: 50%;
+  height: 10px;
+  background-color: #ed0000;
+  left: 0;
+  top: 0;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.appraise-car-header__comlete-line.four:before {
+  position: absolute;
+  content: "";
+  width: 66.7%;
+  height: 10px;
+  background-color: #ed0000;
+  left: 0;
+  top: 0;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.appraise-car-header__comlete-line.five:before {
+  position: absolute;
+  content: "";
+  width: 83.5%;
+  height: 10px;
+  background-color: #ed0000;
+  left: 0;
+  top: 0;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.appraise-car-header__comlete-line.six:before {
+  position: absolute;
+  content: "";
+  width: 95%;
+  height: 10px;
+  background-color: #ed0000;
+  left: 0;
+  top: 0;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+.appraise-car-header__comlete-line.full:before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 10px;
+  background-color: #ed0000;
+  left: 0;
+  top: 0;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.appraise-car-body__wrapper {
+  padding: 24px;
+}
+
+.appraise-car-body__brand-input-text input,
+.appraise-car-body__model-input-text input,
+.appraise-car-body__mileage-input-text input {
+  width: calc(100% - 42px);
+  height: 48px;
+  padding: 0 20px;
+  background: #ffffff;
+  border: 0.5px solid #000000;
+}
+
+.appraise-car-body__mileage-input-text input:invalid {
+  border: solid 1px red;
+}
+
+.appraise-car-body__brand-input-text input:focus,
+.appraise-car-body__model-input-text input:focus,
+.appraise-car-body__mileage-input-text input:focus {
+  outline: none;
+}
+
+.appraise-car-body__brand-input-radio,
+.appraise-car-body__model-input-radio,
+.appraise-car-body__year-input-radio,
+.appraise-car-body__generation-input-radio,
+.appraise-car-body__modification-input-radio {
+  margin-top: 20px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr) [4];
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 16px;
+}
+
+.appraise-car-body__list-content{
+  text-align: start;
+}
+
+.appraise-car-body__brand-input-radio label,
+.appraise-car-body__model-input-radio label,
+.appraise-car-body__year-input-radio label,
+.appraise-car-body__generation-input-radio label,
+.appraise-car-body__modification-input-radio label {
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-family: MMC-Regular;
+  font-size: 16px;
+  line-height: 19px;
+  color: #000000;
+}
+
+.appraise-car-body__brand-input-radio label input,
+.appraise-car-body__model-input-radio label input,
+.appraise-car-body__year-input-radio label input,
+.appraise-car-body__generation-input-radio label input,
+.appraise-car-body__modification-input-radio label input {
+  margin-right: 5px;
+}
+
+.appraise-car-body__brand-input-radio label input:focus,
+.appraise-car-body__model-input-radio label input:focus,
+.appraise-car-body__year-input-radio label input:focus,
+.appraise-car-body__generation-input-radio label input:focus,
+.appraise-car-body__modification-input-radio label input:focus {
+  outline: none;
+}
+
+.appraise-car-body__equipment-input-radio input {
+  margin-right: 5px;
+}
+
+.appraise-car-body__equipment-input-radio input:focus {
+  outline: none;
+}
+
+.appraise-car-body__brand-btn-more span,
+.appraise-car-body__model-btn-more span {
+  margin: 20px 0;
+  font-family: MMC-Regular;
+  font-size: 14px;
+  line-height: 17px;
+  -webkit-text-decoration-line: underline;
+  text-decoration-line: underline;
+  color: #ed0000;
+  cursor: pointer;
+}
+
+.appraise-car-body__generation-input-radio,
+.appraise-car-body__modification-input-radio {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr) [2];
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 10px;
+}
+
+.appraise-car-body__generation-input-radio label,
+.appraise-car-body__modification-input-radio label {
+  font-family: MMC-Regular;
+  font-size: 16px;
+  line-height: 19px;
+  color: #000000;
+  cursor: pointer;
+}
+
+.appraise-car-body__generation-btn-more,
+.appraise-car-body__modification-btn-more,
+.appraise-car-body__equipment-btn-more,
+.appraise-car-body__year-btn-more {
+  opacity: 0;
+}
+
+.appraise-car-body__equipment-input-radio {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: repeat 3, 1fr;
+  grid-template-rows: repeat 3, 1fr;
+  grid-gap: 10px;
+}
+
+.appraise-car-body__equipment-input-radio label {
+  font-family: MMC-Regular;
+  font-size: 16px;
+  line-height: 19px;
+  color: #000000;
+  cursor: pointer;
+}
+
+.appraise-car-body__equipment-input-radio label input {
+  margin-right: 5px;
+}
+
+.appraise-car-body__equipment-input-radio label input:focus {
+  outline: none;
+}
+
+.appraise-car-body__mileage-btn {
+  margin-top: 20px;
+}
+
+.appraise-car-body__mileage-btn div {
+  padding-right: 10px;
+  position: relative;
+  width: 131px;
+  height: 44px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 150%;
+  color: #ffffff;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  background-color: #ed0000;
+  cursor: pointer;
+}
+
+.appraise-car-body__mileage-btn div::before {
+  content: url(../img/arrow-right.png);
+  position: absolute;
+  right: 10px;
+  top: 12px;
+}
+
+.appraise-car-body__mileage-btn div:focus {
+  outline: none;
+}
+
+.acord {
+  position: relative;
+  font-family: MMC-Regular;
+  font-size: 16px;
+  line-height: 19px;
+  color: #000000;
+  padding: 20px 0;
+}
+
+.acord::before {
+  position: absolute;
+  content: url(../img/arrow_down.png);
+  right: 0;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.acord.active-appraise::before {
+  opacity: 0;
+}
+
+.appraise-car-body__list-content {
+  border-bottom: solid 2px #e0e0e0;
+}
+
+.list-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.app-list-item {
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  max-height: 0;
+  overflow: hidden;
+}
+
+.appraise-car-body__brand-input-radio,
+.appraise-car-body__model-input-radio {
+  max-height: 140px;
+  overflow: hidden;
+}
+
+.from-brand,.from-model,.from-generation,.callback-form,.from-modification,.from-equipment,.from-year,.from-mileage{
+  text-align: start;
+}
+
+
+/* .appraise-car-body{
+
+    &__list{
+        display: flex;
+        flex-direction: column;
+    }
+    &__brand {
+        order: -7;
+    }
+    &__model {
+        order: -6;
+    }
+    &__generation {
+        order: -5;
+    }
+    &__modification {
+        order: -4;
+    }
+    &__equipment {
+        order: -3;
+    }
+    &__year {
+        order: -2;
+    }
+    &__mileage {
+        order: -1;
+    }
+}
+ */
+.callback-form {
+  margin-top: 32px;
+}
+
+.callback-form p:first-child {
+  font-family: MMC-Regular;
+  font-size: 16px;
+  line-height: 19px;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  color: #000000;
+}
+
+.callback-form p:last-child {
+  font-family: MMC-Regular;
+  font-size: 20px;
+  line-height: 23px;
+  color: #000000;
+}
+
+.callback-form p:last-child span {
+  font-family: MMC-Regular;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 23px;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  text-transform: uppercase;
+  color: #000000;
+  margin-right: 20px;
+}
+
+.callback-form__body {
+  margin: 20px 0;
+  background: #ed0000;
+  max-width: 525px;
+}
+
+.callback-form form {
+  margin: 28px 35px;
+}
+
+.callback-form form h4 {
+  padding-top: 25px;
+  font-family: MMC-Regular;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 21px;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+.callback-form form {
+  padding-bottom: 20px;
+}
+
+.callback-form form input {
+  margin-top: 14px;
+  max-width: 355px;
+  width: 100%;
+  font-family: MMC-Regular;
+  font-size: 14px;
+  line-height: 16px;
+  padding: 12px 10px;
+}
+
+.callback-form form input:focus {
+  outline: none;
+}
+
+.callback-form form div {
+  margin-top: 10px;
+  padding: 12px 10px;
+  max-width: 355px;
+  width: 100%;
+  background: #000000;
+  font-family: MMC-Regular;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 21px;
+  text-transform: uppercase;
+  text-align: center;
+  color: #ffffff;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.callback-form form div:focus {
+  outline: none;
+}
+
+.appraise-car-body__brand-btn-more,
+.appraise-car-body__model-btn-more {
+  margin: 20px 0;
+}
+
+.appraise-car-body__brand-input-text {
+  position: relative;
+}
+
+.block-of-found-cars-brand {
+  position: absolute;
+  max-height: 200px;
+  width: calc(100% - 2px);
+  overflow: auto;
+  border: solid 1px #e0e0e0;
+  background-color: #fff;
+}
+
+.appraise-car-body__model-input-text {
+  position: relative;
+}
+
+.block-of-found-cars-model {
+  z-index: 150;
+  position: absolute;
+  max-height: 200px;
+  width: calc(100% - 2px);
+  overflow: auto;
+  border: solid 1px #e0e0e0;
+  background-color: #fff;
+}
+
+.block-of-found-cars-brand::-webkit-scrollbar-track {
+  border-radius: 4px;
+}
+
+.block-of-found-cars-brand::-webkit-scrollbar {
+  width: 6px;
+}
+
+.block-of-found-cars-brand::-webkit-scrollbar-thumb {
+  border-radius: 4px;
+  background: #f0f2f5;
+}
+
+.block-of-found-cars-brand:hover::-webkit-scrollbar-thumb {
+  background: #6a7d9b;
+}
+
+.block-of-found-cars-model::-webkit-scrollbar-track {
+  border-radius: 4px;
+}
+
+.block-of-found-cars-model::-webkit-scrollbar {
+  width: 6px;
+}
+
+.block-of-found-cars-model::-webkit-scrollbar-thumb {
+  border-radius: 4px;
+  background: #f0f2f5;
+}
+
+.block-of-found-cars-model:hover::-webkit-scrollbar-thumb {
+  background: #6a7d9b;
+}
+
+.brand-search-block {
+  padding: 5px 15px;
+  font-family: MMC-Regular;
+  font-size: 16px;
+  line-height: 19px;
+  color: #000000;
+}
+
+.brand-search-block:hover {
+  background-color: #ededed;
+  cursor: pointer;
+}
+
+.model-search-block {
+  padding: 5px 15px;
+  font-family: MMC-Regular;
+  font-size: 16px;
+  line-height: 19px;
+  color: #000000;
+}
+
+.model-search-block:hover {
+  background-color: #ededed;
+  cursor: pointer;
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+input[type="number"],
+input[type="number"]:hover,
+input[type="number"]:focus {
+  -webkit-appearance: none;
+  appearance: none;
+  -moz-appearance: textfield;
+}
+
+@media (max-width: 650px) {
+  .appraise-car-body__modification-input-radio {
+    -ms-grid-columns: (1fr) [1];
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+@media (max-width: 525px) {
+  .appraise-car-body__brand-input-radio,
+  .appraise-car-body__model-input-radio {
+    -ms-grid-columns: (1fr) [3];
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 420px) {
+  .appraise-car-body__brand-input-radio,
+  .appraise-car-body__model-input-radio {
+    -ms-grid-columns: (1fr) [2];
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 475px) {
+  .callback-form form div {
+    width: calc(100% + 20px);
+  }
+}
+
+@media (max-width: 400px) {
+  .callback-form form {
+    overflow: hidden;
+  }
+  .callback-form form div {
+    width: 100%;
+  }
+}
+
+.evaluated-car {
+  display: none;
+  border-bottom: solid 2px #e0e0e0;
+}
+.evaluated-car__wrapper {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 20px;
+}
+.evaluated-car__content {
+  font-family: MMC-Regular;
+  font-size: 16px;
+  line-height: 19px;
+  color: #000000;
+}
+.evaluated-car__content p:first-child {
+  margin-bottom: 10px;
+}
+
+
+
+.evaluated-car__content p:last-child span {
+  color:#ed0000 ;
+}
+.evaluated-car__btn-reset {
+  font-family: MMC-Regular;
+  font-size: 16px;
+  line-height: 19px;
+  color: #000000;
+}
+.evaluated-car__btn-reset button {
+  background-color: unset;
+  color: #9c9b9b;
+  transition: 0.5s;
+  font-family: MMC-Regular;
+  font-size: 16px;
+  line-height: 19px;
+}
+
+.evaluated-car__btn-reset button:hover {
+  color: #ed0000;
+}
+
+.callback-form__body .disable {
+  pointer-events: unset;
+  color: #4e4848;
+}
+
+.appraise-car-footer {
+
+  margin-top: 100px;
+  display: none;
+  justify-content: center;
+  
+}
+
+.appraise-car-footer__btn-accept {
+  position: relative;
+  background-color: #ed0000;
+  padding: 15px 25px;
+  cursor: pointer;
+}
+
+.appraise-car-footer__btn-accept p {
+  
+  font-family: MMC-Regular;
+  font-size: 16px;
+  line-height: 19px;
+  display: inline;
+  color: white;
+  margin-right: 20px;
+}
+
+.appraise-car-footer__btn-accept::before{
+  content: url(../img/arrow-right.png);
+  position: absolute;
+  right:20px;
+  width: 10px;
+  height: 22px;
+  top: 15px;
+}

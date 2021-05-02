@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=1" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <title>cars-in-stock</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+    <div class="cars-in-stock">
+        <div class="cars-in-stock__container">
+            <div class="filter">
+                <div class="filter__wrapper">
+                    <div class="filter__button-close">
+                        <div class="filter-close">
+                            <p>Расширеный поиск</p>
+                            <div>
+                                <img src="img/cross-closed.svg" alt="#">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="filter-header">
+                        <div class="filter-header__wrapper">
+                            <div class="filter-header__found-auto btnshow__text">
+                                <span>Найден</span>
+                                <span class="count">1</span>
+                                <span>авто</span>
+                            </div>
+                            <div class="filter-header__special">
+                                <h5>Спецпредложения</h5>
+                            </div>
+                            <div class="filter-header__online-payment">
+                                <label class="filter-header__switch">
+                                    <input type="checkbox" id="header__switch">
+                                    <span class="slider round"></span>
+                                </label>
+                                <label for="header__switch">
+                                    <p>Оплата онлайн</p>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="filter-list">
+                        <div class="filter-list__wrapper">
+                            <form method="dialog" class="form" id="form">
+                                <input type="checkbox" class="change">
+                                <input type="checkbox" class="car-price">
+                                <input type="checkbox" class="car-trade-in">
+                                <div class="filter-list__complete-set filter-list-block">
+                                    <span class="accordion">Комплектация</span>
+                                    <div class="filter-list__content">
+                                        <div class="additionally-close"></div>
+                                        <div class="filter-list__content-wrapper" id="scrollStyle-1">
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                            <div class="filter-list__clearbtn">
+                                <button type="reset">Очистить фильтр</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="btn-show__car">
+                        <div class="btn-show__car-wrapper">
+                            <button type="button" class="btn-show">Показать <span class="count">N</span> авто</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="result-auto">
+                <div class="result-auto__header">
+                    <div class="button__filter-show">
+                        <p>Фильтр</p>
+                        <div class="button__text">
+                            <span class="count">1&nbsp &nbsp</span>
+                            <span>&nbsp автомобиль</span>
+                            <div class="white-arrow">
+                                <img src="img/white-arrow.svg" alt="#">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="header__wrapper">
+
+                        <div class="header__title">
+                            <div>
+                                <h4>Сортировать по &nbsp </h4>
+                            </div>
+                            <div id="pyramid">
+                                <div>цене</div>
+                                <div>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="header__trade-in">
+                            <label class="trade-in__switch">
+                                <input type="checkbox" id="trade-in_switch">
+                                <span class="slider round"></span>
+                            </label>
+                            <div class="trade-in__text">
+                                <label for="trade-in_switch">
+                                    <h5>Цена с учётом Trade-in</h5>
+
+                                </label>
+                                <div>Оцените свой автомобиль</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="result-body">
+                    <div class="car-list">
+                        <div class="car-list__wrapper">
+
+                        </div>
+                    </div>
+                </div>
+                <div class="result-footer">
+                    <button type="button">показать ещё</button>
+                </div>
+            </div>
+            <section class="appraise-car">
+                <div class="appraise-car__wrapper">
+                    <div class="appraise-car-header">
+                        <div class="appraise-car-header__wrapper">
+                            <div class="appraise-car-header__title">
+                                <h3>Оценка автомобиля</h3>
+                            </div>
+                            <div class="appraise-car-header__closecross">
+                                <img src="img/closeCross.png" alt="#" />
+                            </div>
+                        </div>
+                        <div class="appraise-car-header__comlete-line"></div>
+                    </div>
+                    <div class="appraise-car-body">
+                        <div class="appraise-car-body__wrapper">
+                            <form method="dialog" class="appraise-form">
+                                <div class="appraise-car-body__list">
+                                    <div class="evaluated-car">
+                                        <div class="evaluated-car__wrapper">
+                                            <div class="evaluated-car__content">
+                                                <p>Модель - <span></span></p>
+                                                <p>Цена - <span></span></p>
+                                            </div>
+                                            <div class="evaluated-car__btn-reset">
+                                                <button type="button">cбросить</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="appraise-car-footer">
+                        <div class="appraise-car-footer__wrapper">
+                            <div class="appraise-car-footer__btn-accept">
+                                <div>
+                                    <p>Принять</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="current-price-block">
+                <div class="current-price-block__wrapper">
+                    <div class="current-price-block-header">
+                        <div class="current-price-block-header__title">
+                            <h4>Подробнее о цене</h4>
+                        </div>
+                        <img src="./img/closeCross.png" alt="">
+                    </div>
+                    <div class="current-price-block-body">
+                        <div class="current-price-block-body__original-price">
+                            <div class="current-price-block-body__model">
+                                <h4>Изначальная цена автомобиля</h4>
+                                <p class="current-price-block-body__model-text">PAJERO SPORT</p>
+                            </div>
+                            <div class="current-price">
+                                <p>118 000</p><span>BYN</span>
+                            </div>
+                        </div>
+                        <div class="price-of-your-car">
+                            <div class="price-of-your-car__model">
+                                <h4>Цена вашего автомобиля</h4>
+                                <p class="price-of-your-car__model-text">Renault Arkana</p>
+                            </div>
+                            <div class="current-price-you-car">
+                                <p>90 000</p><span>BYN</span>
+                            </div>
+                            <div class="appraise-you-car">
+                                <p>Оцените ваш автомобиль</p>
+                            </div>
+                        </div>
+                        <div class="benefits">
+                            <h4>Выгоды</h4>
+                            <div class="benefits__per-month">
+                                <div class="benefits__per-month-text">
+                                    <p>Выгода в</p>
+                                    <span class="benefits-month"> феврале</span>
+                                </div>
+                                <div class="benefits__per-month-value">
+                                    <span>- 2000 BYN</span>
+                                </div>
+                            </div>
+                            <div class="benefits__tradein">
+
+                                <div class="benefits__text">
+                                    <p>Выгода trade-in</p>
+                                </div>
+                                <div class="benefits__tradein-value">
+                                    <span>- 20 000 BYN</span>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="current-price-block-footer">
+                        <p>Итоговая стоимость</p>
+                        <p>8 000 BYN</p>
+                    </div>
+
+                </div>
+            </section>
+            <section class="description-car-container">
+                <div class="description-car">
+                    <div class="description-car__wrapper">
+                        <div class="foto-block">
+                            <div class="main-foto">
+                                <img src="img/image 2.png" alt="#">
+                            </div>
+                            <div class="secondary-foto-block">
+                                
+                            </div>
+                        </div>
+                        <div class="car-info-block">
+                            <div class="car-name car-year">
+                                <p>Kia Sportage</p> <span>2020</span>
+                            </div>
+                            <div class="car-price">
+                                <p>63 050</p><span>BYN</span>
+                            </div>
+                            <div class="car-engine">
+                                <img src="img/car-list-item/malfunction-indicador.svg" alt="#"><span>1,6 л., 132 л.с,
+                                    бензин</span>
+                            </div>
+                            <div class="car-transmission">
+                                <img src="img/car-list-item/manual-transmission.svg" alt="#"><span>МКП</span>
+                            </div>
+                            <div class="car-drive">
+                                <img src="img/car-list-item/axle.svg" alt="#"><span>передний привод (2WD)</span>
+                            </div>
+                            <div class="car-mileage">
+                                <img src="img/car-list-item/odometer.svg" alt="#"><span>Пробег: 29 400 км</span>
+                            </div>
+                            <div class="car-descript">
+                                <div class="security-system">
+                                    <p>Система безопасности:</p>
+                                    <div>ABS с электронным распределением тормозных усилий
+                                        ESС (система курсовой устойчивости)
+                                    </div>
+                                </div>
+                                <div class="comfort">
+                                    <p>Комфорт</p>
+                                    <div>Кондиционер
+                                        Бортовой компьютер
+                                        Электростекла передние и задние
+                                    </div>
+                                </div>
+                                <div class="additional-equipment">
+                                    <p>Дополнительное оборудование</p>
+                                    <div>Сигнализация с обратной связью
+                                        Стальная защита картера
+                                        Защита радиатора (сетка)
+                                        Комплект ковриков в салон и багажник
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="btn-reserve">
+                                <a href="#" class="red_button viewer" data-toggle="modal" data-target="#pop-up"
+                                    data-type="car-in-stock" data-car="8">ЗАРЕЗЕРВИРОВАТЬ</a>
+                            </div>
+                        </div>
+                        <div class="block-btn-cross-close">
+                            <img src="img/crossPopUp.svg" alt="#">
+                        </div>
+
+                    </div>
+
+                </div>
+            </section>
+        </div>
+    </div>
+    <script src="scripts/nouislider.min.js"></script>
+    <script type="module" src="scripts/main.js"></script>
+</body>
+
+</html>
+
+
+<!-- /images/new-filter/
+../../../images/new-filter/ -->
