@@ -23,7 +23,7 @@
 .description-car__wrapper {
     display: grid;
     padding: 30px 40px;
-    grid-template-areas: "foto car cros";
+    grid-template-areas: "foto car";
     grid-template-columns: 1fr 1fr 10px;
     grid-gap: 30px;
     margin: 20px;
@@ -59,7 +59,7 @@
 }
 .car-name {
     display: flex;
-    align-items: baseline;
+    align-items: flex-end;
 }
 .car-name p {
     font-weight: bold;
@@ -79,19 +79,18 @@
     color: #000000;
 }
 
-.car-price-popup{
+.car-price {
     margin-top: 12px;
     display: flex;
-    align-items: baseline;
+    align-items: flex-end;
 }
-.car-price-popup p {
+.car-price p {
     font-weight: bold;
     font-size: 19px;
     line-height: 23px;
     color: #000000;
-    
 }
-.car-price-popup span {
+.car-price span {
     margin-left: 3px;
     font-weight: 500;
     font-size: 16px;
@@ -121,8 +120,6 @@
     color: #000000;
 }
 .car-descript {
-    max-height: 400px;
-    overflow: auto;
     margin-top: 30px;
     font-weight: 500;
     font-size: 16px;
@@ -145,9 +142,6 @@
 }
 .btn-reserve {
     margin-top: 30px;
-}
-.block-btn-cross-close {
-    grid-area: cros;
 }
 .block-btn-cross-close img {
     position: relative;
@@ -182,63 +176,3 @@
     background-color: #666;
 }
 
-.btn-reserve1 {
-    margin-top: 35px;
-}   
-
-@media (max-width: 800px) {
-.description-car__wrapper {
-    display: grid;
-    padding: 30px 40px;
-    grid-template-areas: 
-    "foto foto foto"
-    'car car car';
-    grid-template-columns: 1fr 1fr 10px;
-    grid-gap: 10px;
-    margin: 20px;
-}
-.description-car__wrapper{
-    margin: 0;
-}
-.description-car{
-    width: 100%;
-    margin: 0;
-    overflow: scroll;
-    max-height: unset;
-}
-.btn-reserve1{
-    margin: 50px 0;
-}
-.block-btn-cross-close{
-    position: absolute;
-    right: -10px;
-    top: 10px;
-}
-.main-foto{
-    margin-top: 15px;
-}
-.car-name p{
-   font-size: 20px;
-}
-}
-
-
-
-.car-descript::-webkit-scrollbar {
-    width: 3px;
-    height: 3px;
-}
-.car-descript::-webkit-scrollbar-track-piece {
-    background-color: #ffffff;
-}
-.car-descript::-webkit-scrollbar-thumb {
-    height: 50px;
-    background-color: #666;
-    border-radius: 3px;
-}
-.car-descript::-webkit-scrollbar-corner {
-    background-color: #999;
-}
-.car-descript::-webkit-resizer {
-    background-color: #666;
-}
