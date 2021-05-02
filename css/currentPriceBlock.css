@@ -1,0 +1,193 @@
+.current-price-block {
+  display: none;
+  font-family: MMC-Regular;
+  overflow: hidden;
+  z-index: 119;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  position: fixed;
+  top: 0;
+  left: 0;
+  max-width: 540px;
+  width: 100%;
+  background-color: #fff;
+  height: 100%;
+  border: solid 1px #e0e0e0;
+}
+.current-price-block__wrapper {
+  padding: 32px;
+}
+.current-price-block-header {
+  position: relative;
+  text-align: center;
+}
+.current-price-block-header img {
+  position: absolute;
+  right: 0;
+  top: -16px;
+  padding: 20px;
+  cursor: pointer;
+}
+.current-price-block-header__title h4 {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 29px;
+  align-items: center;
+  color: #333333;
+}
+.current-price-block-body {
+  margin-top: 65px;
+}
+.current-price-block-body__original-price {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.current-price-block-body__model h4,
+.price-of-your-car__model h4 {
+  font-size: 16px;
+  line-height: 19px;
+  color: #000000;
+}
+.current-price-block-body__model p,
+.price-of-your-car__model p {
+  margin-top: 8px;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 19px;
+  color: #828282;
+}
+
+.current-price,
+.current-price-you-car {
+  display: flex;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  color: #000000;
+}
+.price-of-your-car {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.appraise-you-car {
+  display: none;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 100%;
+  text-decoration-line: underline;
+  color: #ed0000;
+  cursor: pointer;
+}
+
+.price-of-your-car {
+  margin-top: 36px;
+}
+.current-price span,
+.current-price-you-car span {
+  margin-left: 5px;
+}
+
+.benefits {
+  padding: 20px 0;
+  margin-top: 36px;
+  background: #efefef;
+  width: calc(100% + 64px);
+  transform: translateX(-32px);
+}
+.benefits h4 {
+  margin-left: 32px;
+
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  align-items: center;
+  color: #000000;
+}
+.benefits__per-month,
+.benefits__tradein {
+  margin-top: 21px;
+  margin-left: 32px;
+  margin-right: 32px;
+  display: flex;
+  justify-content: space-between;
+}
+.benefits__per-month-text {
+  display: flex;
+}
+.benefits-month {
+  margin-left: 5px;
+}
+.benefits__per-month-value {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  color: #ed0000;
+}
+
+.benefits__tradein-value {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  color: #000000;
+}
+.current-price-block-footer {
+  position: relative;
+  margin-top: 68px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.current-price-block-footer ::after {
+  content: "";
+  position: absolute;
+  width: 1220px;
+  border-radius: solid 2px #e0e0e0;
+  height: 2px;
+  top: -30px;
+  left: -40px;
+  background-color: #e0e0e0;
+}
+.current-price-block-footer p {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  color: #000000;
+}
+
+.current-price-block-footer p:last-child {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  color: #ed0000;
+}
+
+.current-price-block-body__original-price {
+  position: relative;
+}
+
+.current-price-block-body__original-price::after {
+  content: "";
+  position: absolute;
+  width: 1220px;
+  border-radius: solid 2px #e0e0e0;
+  height: 2px;
+  top: -30px;
+  left: -40px;
+  background-color: #e0e0e0;
+}
+
+.price-of-your-car__model-text {
+  display: none;
+}
+.current-price-you-car {
+  display: none;
+}
+.appraise-you-car {
+  display: block;
+}
+.benefits__tradein {
+  display: none;
+}
