@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=1" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <title>cars-in-stock</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+
+<body>
+    <div class="cars-in-stock">
+        <section class="header-cars">
+            <div class="header-cars__wrapper">
+                <div class="header-cars__title">
+                    <h2>Mitsubishi в наличии</h2>
+                </div>
+                <div class="header-cars-content">
+                   <div class="header-cars-content__item" data-name='ASX'>
+                       <img src="/img/header-car-slider/asx.png" alt="ASX">
+                       <p>ASX</p>
+                   </div>
+                   <div class="header-cars-content__item"  data-name='L200'>
+                       <img src="/img/header-car-slider/l200.png" alt="L200">
+                        <p>L200</p>
+                   </div>
+                   <div class="header-cars-content__item"  data-name='Outlander'>
+                       <img src="/img/header-car-slider/oulander.png" alt="Outlander">
+                        <p>OUTLANDER</p>
+                   </div>
+                   <div class="header-cars-content__item"  data-name='Pajero Sport'>
+                       <img src="/img/header-car-slider/pajero.png" alt="Pajero Sport">
+                        <p>PAJERO SPORT</p>
+                   </div>
+                </div>
+            </div>
+        </section>
+        <div class="cars-in-stock__container">
+            <div class="filter">
+                <div class="filter__wrapper">
+                    <div class="filter__button-close">
+                        <div class="filter-close">
+                            <p>Расширеный поиск</p>
+                            <div>
+                                <img src="/img/cross-closed.svg" alt="#">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="filter-header">
+                        <div class="filter-header__wrapper">
+                            <div class="filter-header__found-auto btnshow__text">
+                                <span>Найден</span>
+                                <span class="count">1</span>
+                                <span>авто</span>
+                            </div>
+                            <div class="filter-header__special">
+                                <h5>Авто в наличии</h5>
+                            </div>
+                            <div class="filter-header__online-payment">
+                                <label class="filter-header__switch">
+                                    <input type="checkbox" id="header__switch">
+                                    <span class="slider round"></span>
+                                </label>
+                                <label for="header__switch">
+                                    <p>Оплата онлайн</p>
+                                </label>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="filter-list">
+                        <div class="filter-list__wrapper">
+                            <form method="dialog" class="form" id="form">
+                                <input type="checkbox" class="change">
+                                <input type="checkbox" class="car-price">
+                                <input type="checkbox" class="car-trade-in">
+                                <div class="filter-list__complete-set filter-list-block">
+                                    <span class="accordion">Комплектация</span>
+                                    <div class="filter-list__content">
+                                        <div class="additionally-close"></div>
+                                        <div class="filter-list__content-wrapper" id="scrollStyle-1">
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                            <div class="filter-list__clearbtn">
+                                <button type="reset">Очистить фильтр</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="btn-show__car">
+                        <div class="btn-show__car-wrapper">
+                            <button class="btn-show">Показать <span class="count"></span> авто</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="result-auto">
+                <div class="result-auto__header">
+                    <div class="button__filter-show">
+                        <p>Фильтр</p>
+                        <div class="button__text">
+                            <span class="count"></span>
+                            <span>&nbsp &nbspАвто</span>
+                            <div class="white-arrow">
+                                <img src="/img/white-arrow.svg" alt="#">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="header__wrapper">
+
+                        <div class="header__title">
+                            <div>
+                                <h4>Сортировать по &nbsp </h4>
+                            </div>
+                            <div id="pyramid">
+                                <div>цене</div>
+                                <div>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="header__trade-in">
+                            <label class="trade-in__switch">
+                                <input type="checkbox" id="trade-in_switch">
+                                <span class="slider round"></span>
+                            </label>
+                            <div class="trade-in__text">
+                                <label for="trade-in_switch">
+                                    <h5>Цена с учётом Trade-in</h5>
+                                    <a href="#">Оцените свой автомобиль</a>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="result-body">
+                    <div class="car-list">
+                        <div class="car-list__wrapper">
+
+                        </div>
+                    </div>
+                </div>
+                <div class="result-footer">
+                    <button>
+                        <p>показать ещё</p>
+
+                        <div class="loader"></div>
+                    </button>
+                </div>
+            </div>
+            <section class="description-car-container">
+                <div class="description-car">
+                    <div class="description-car__wrapper">
+                        <div class="foto-block">
+                            <div class="main-foto">
+
+                            </div>
+                            <div class="secondary-foto-block">
+
+                            </div>
+                        </div>
+                        <div class="car-info-block">
+                            <div class="car-name car-year">
+                                <p></p> <span></span>
+                            </div>
+                            <div class="car-price-popup">
+                                <p></p><span>BYN</span>
+                            </div>
+                            <div class="car-engine">
+                                <img src="/img/car-list-item/malfunction-indicador.svg" alt="#"><span></span>
+                            </div>
+                            <div class="car-transmission">
+                                <img src="/img/car-list-item/manual-transmission.svg" alt="#"><span></span>
+                            </div>
+                            <div class="car-drive">
+                                <img src="/img/car-list-item/axle.svg" alt="#"><span></span>
+                            </div>
+                            <div class="car-mileage">
+                                <img src="/img/car-list-item/odometer.svg" alt="#"><span></span>
+                            </div>
+                            <div class="car-descript">
+                                <div class="security-system">
+
+                                </div>
+                            </div>
+                            <div class="btn-reserve1">
+                                <a href="#" class="red_button viewer" data-toggle="modal" data-target="#pop-up"
+                                    data-type="car-in-stock" data-car="8">ЗАРЕЗЕРВИРОВАТЬ</a>
+                            </div>
+                        </div>
+                        <div class="block-btn-cross-close">
+                            <img src="/img/crossPopUp.svg" alt="#">
+                        </div>
+
+                    </div>
+
+                </div>
+            </section>
+        </div>
+    </div>
+    <script src="scripts/nouislider.min.js"></script>
+    <script type="module" src="scripts/main.js"></script>
+</body>
+
+</html>
